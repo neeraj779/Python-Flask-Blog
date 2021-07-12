@@ -1,0 +1,11 @@
+{
+    "params":
+    {
+        "server":"True",
+        "local_uri":"mysql://root:@localhost/my blog",
+        "production_uri":"mysql://root:@localhost/my blog"
+
+
+
+    }
+}

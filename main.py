@@ -1,9 +1,16 @@
 from flask import Flask, render_template , request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+import json
+
+with open("config.json", "r") as parameters:
+    data = json.load(parameters)["params"]
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/my blog'
+if data["local_server"]:
+    app.config['SQLALCHEMY_DATABASE_URI'] = data["local_uri"]
+else:
+    app.config['SQLALCHEMY_DATABASE_URI'] = data["production_uri"]
 db = SQLAlchemy(app)
 
 class Contact(db.Model):
