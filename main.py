@@ -39,12 +39,14 @@ class Posts(db.Model):
     slug = db.Column(db.String(20), nullable=False)
     img = db.Column(db.String(20), nullable=False)
     date = db.Column(db.String(12), nullable=True)
+    tag_line = db.Column(db.String(20), nullable=True)
     
 
 
 @app.route("/")
 def home():
-    return render_template("index.html", data=data)
+    posts = Posts.query.filter_by().all()
+    return render_template("index.html", data=data, posts=posts)
 
 
 @app.route("/about")
