@@ -4,7 +4,7 @@
     "local_server":"True",
     "local_uri": "mysql://root:@localhost/my blog",
     "production_uri":"mysql://root:@localhost/my blog",
-    "twitter_url":"https://twitter.com/Neeraj9271",
+    "twitter_url":"https://twitter.com/neeraj_779",
     "github_url": "https://github.com/neeraj779",
     "blog_name": "Neeraj's blog",
     "tag_line": "Heaven for programmers",
